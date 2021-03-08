@@ -1,0 +1,13 @@
+#about{
+    position: relative;
+    height: 100px;
+    background-image: linear-gradient(#4568dc, #b06ab3);
+}
+
+svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vw;
+    fill: white;
+}

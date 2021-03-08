@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 // import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Navbar from "./components/Navbar";
-import {Link} from "react-scroll";
+
 
 
 function App() {

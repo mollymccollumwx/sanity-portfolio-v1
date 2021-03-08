@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-scroll";
-import image from "./molly1x1.JPG"
+import image from "./molly.JPG"
+import "./About.css"
 
 const About = () => {
   return (
     <>
-      <div id="about" class="min-w-screen min-h-screen bg-blue-500 flex items-center p-5 lg:p-10 overflow-hidden relative">
+      <div id="about" class="min-w-screen min-h-screen bg-green-500 flex items-center p-5 lg:p-10 overflow-hidden relative">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none"> <polygon points="0, 100, 100, 0 100, 100"></polygon></svg>
         <div class="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
           <div class="md:flex items-center -mx-10">
             <div class="w-full md:w-1/2 px-20 mb-10 md:mb-0">
@@ -22,7 +24,7 @@ const About = () => {
             <div class="w-full md:w-1/2 px-10">
               <div class="mb-10">
                 <h1 class="font-bold text-5xl mb-5">
-                  MOLLY McCOLLUM
+                  About Me
                 </h1>
                 <p class="text-md">
                 I'm a full-stack developer leveraging both a strong science and communications background. I recently completed GA Tech's Full-Stack Web Development Certificate Program and I'm seeking my first job in front-end or full-stack development. Prior to a career in tech, I worked as a broadcast meteorologist for 5 years in the Great Plains and in my hometown of Atlanta. I have a B.S. in Atmospheric Sciences from the University of Georgia.{" "}
