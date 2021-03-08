@@ -13,6 +13,10 @@ export default {
             type: "text",
         },
         {
+            name: "technology",
+            type: "text",
+        },
+        {
             name: 'mainImage',
             title: 'Main image',
             type: 'image',
