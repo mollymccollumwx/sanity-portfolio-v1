@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import sanityClient from "../client.js";
+import sanityClient from "../client.js"
+
 
 export default function Project() {
   const [projectData, setProjectData] = useState(null);
@@ -28,12 +29,13 @@ export default function Project() {
 
   return (
     <>
-      <section className="bg-gray-800 py-20">
+      <section className="py-20" id="projects">
         <div className="max-w-8xl px-6 mx-auto text-center">
           <h2 className="text-2xl font-semibold text-white">Projects</h2>
 
           <div className="flex items-center justify-center mt-10">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+        
               {projectData &&
                 projectData.map((project, index) => (
                   <div className="max-w-md w-full">
@@ -58,10 +60,10 @@ export default function Project() {
                         {project.technology}
                         </span>
 
-                        <button className="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 mx-1 rounded">
+                        <button href={project.githubLink} target="_blank" className="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 m-5 rounded">
                           Source Code
                         </button>
-                        <button className="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 mx-1 rounded">
+                        <button  href={project.deployedLink} target="_blank" className="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 m-5 rounded">
                           See Live
                         </button>
                       </div>
