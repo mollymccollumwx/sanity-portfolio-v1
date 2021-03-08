@@ -28,59 +28,62 @@ export default function Project() {
 
   return (
     <>
-      <section class="bg-gray-800 py-20">
-        <div class="max-w-8xl px-6 mx-auto text-center">
-          <h2 class="text-2xl font-semibold text-white">Projects</h2>
+      <section className="bg-gray-800 py-20">
+        <div className="max-w-8xl px-6 mx-auto text-center">
+          <h2 className="text-2xl font-semibold text-white">Projects</h2>
 
-          <div class="flex items-center justify-center mt-10">
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-3">
+          <div className="flex items-center justify-center mt-10">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
               {projectData &&
                 projectData.map((project, index) => (
-                  <div class="max-w-md w-full">
-                    <div class="flex items-center justify-center rounded-md h-96 border-teal-400 overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                  <div className="max-w-md w-full">
+                    <div className="flex items-center justify-center rounded-md h-96 border-teal-400 overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:opacity-50">
                       <img
-                        class="object-cover h-full w-full"
+                        className="object-cover h-full w-full"
                         src={project.mainImage.asset.url}
                         alt={project.title}
                       />
                     </div>
 
-                    <div class="block bg-gray-700 rounded-md mt-4 overflow-hidden ">
-                      <div class="py-2 px-3 text-center text-md">
-                        <p class=" text-2xl text-gray-300 font-bold">{project.title}</p>
+                    <div className="block bg-gray-700 rounded-md mt-4 overflow-hidden ">
+                      <div className="py-2 px-3 text-center text-md">
+                        <p className=" text-2xl text-gray-300 font-bold">{project.title}</p>
 
-                        <span class="block text-gray-500 mt-2">
+                        <span className="block text-gray-500 mt-2">
                           {project.description}
                         </span>
 
-                        <p class="text-gray-300 font-semibold">Technologies Used: </p>
-                        <span class="block text-gray-500 my-2">
+                        <p className="text-gray-300 font-semibold mt-2">Technologies Used: </p>
+                        <span className="block text-gray-500 my-2">
                         {project.technology}
                         </span>
 
-                        <button class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 mx-1 rounded">
+                        <button className="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 mx-1 rounded">
                           Source Code
                         </button>
-                        <button class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 mx-1 rounded">
+                        <button className="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 mx-1 rounded">
                           See Live
                         </button>
                       </div>
                     </div>
                   </div>
+
+                  
+                  
                 ))}
             </div>
           </div>
 
-          <div class="flex items-center justify-center mt-12">
+          <div className="flex items-center justify-center mt-12">
             <a
-              class="flex items-center text-white hover:underline hover:text-gray-200"
+              className="flex items-center text-white hover:underline hover:text-gray-200"
               href="#"
             >
               <span>View More On Github</span>
 
               <svg
               
-                class="h-5 w-5 ml-1"
+                className="h-5 w-5 ml-1"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -96,6 +99,8 @@ export default function Project() {
           </div>
         </div>
       </section>
+
+      
 
 
 
