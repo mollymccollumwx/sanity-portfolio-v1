@@ -88,8 +88,8 @@ export default function Project() {
                     </div>
                   </div>
                 ))}
-              <div class="flex items-center  mt-12">
-                <span class="flex items-center text-white hover:underline hover:text-gray-200">
+              <div className="flex items-center  mt-12">
+                <span className="flex items-center text-white hover:underline hover:text-gray-200">
                   {" "}
                 </span>
               </div>
