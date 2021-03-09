@@ -1,5 +1,4 @@
 import React from "react";
-import image from "./molly1x1.JPG";
 import { Link } from "react-scroll";
 
 const Home = () => {
@@ -15,7 +14,10 @@ const Home = () => {
           </span>
         </h1>
         <div className="justify-center my-auto mx-auto  mt-0 md:mx-48">
-          <Link to="projects">
+          <Link to="projects" spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}>
           <button className="border-2 border-transparent bg-blue-500 ml-3 py-2 px-4 font-bold text-white rounded transition-all hover:border-blue-500 hover:bg-transparent hover:text-blue-500">
             Projects
           </button></Link>
