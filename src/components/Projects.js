@@ -48,7 +48,7 @@ export default function Project() {
                       />
                     </div>
 
-                    <div className="block bg-gray-200 rounded-md overflow-hidden ">
+                    <div className="block bg-gray-00 rounded-md overflow-hidden ">
                       <div className="py-2 px-3 text-center text-md">
                         <p className=" text-2xl text-blue-500 font-bold">{project.title}</p>
 

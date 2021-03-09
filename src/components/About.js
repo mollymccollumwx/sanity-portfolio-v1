@@ -17,7 +17,7 @@ const About = () => {
         </svg>
         <div className="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
           <div className="md:flex items-center -mx-10">
-            <div className="w-full md:w-1/2 px-20 mb-10 md:mb-0">
+            <div className="w-full md:w-1/2 sm:w-3/5 px-20 mb-10 md:mb-0">
               <div className="relative">
                 <img
                   src={image}
