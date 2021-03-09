@@ -22,7 +22,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="about"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-black-200 hover:text-blue-500 cursor-pointer"
+            className="font-bold inline-flex items-center py-3 px-3 my-6 rounded text-black-200 hover:text-blue-500 cursor-pointer"
             active="text-white"
             spy={true}
             smooth={true}
@@ -33,7 +33,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="projects"
-            className="inline-flex items-center py-3 px-3 my-6 rounded text-black-200 hover:text-blue-500  cursor-pointer"
+            className="font-bold inline-flex items-center py-3 px-3 my-6 rounded text-black-200 hover:text-blue-500  cursor-pointer"
             active="text-white"
             spy={true}
             smooth={true}

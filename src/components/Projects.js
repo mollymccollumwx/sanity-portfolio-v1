@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import sanityClient from "../client.js"; 
-import "./Projects.css"
-
-
+import sanityClient from "../client.js";
+import "./Projects.css";
+import { Link } from "react-scroll";
 
 export default function Project() {
   const [projectData, setProjectData] = useState(null);
@@ -31,21 +30,19 @@ export default function Project() {
 
   return (
     <>
-      <section className="py-20" id="projects">
-      <svg id="projects-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <section className="py-20 mt-10" id="projects">
+        <svg id="projects-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
           {" "}
-          
         </svg>
         <div className="max-w-8xl px-6 mx-auto text-center">
           <h2 className="text-6xl font-semibold text-white mt-10">Projects</h2>
 
           <div className="flex items-center justify-center mt-10">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-        
               {projectData &&
                 projectData.map((project, index) => (
                   <div key={index} className="max-w-md w-full">
-                    <div className="flex items-center justify-center rounded-md h-96 border-teal-400 overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:opacity-50">
+                    <div className="rounded-t-md flex items-center justify-center h-96 border-teal-400 overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
                       <img
                         className="object-cover h-full w-full"
                         src={project.mainImage.asset.url}
@@ -53,53 +50,53 @@ export default function Project() {
                       />
                     </div>
 
-                    <div className="block border-4 rounded-md overflow-hidden mt-6">
+                    <div className="block bg-white overflow-hidden rounded-b-md">
                       <div className="py-2 px-3 text-center text-md">
-                        <p className=" text-2xl text-white font-bold">{project.title}</p>
+                        <p className=" text-3xl text-black text-left font-bold">
+                          {project.title}
+                        </p>
 
-                        <span className="block text-black-500 mt-2">
+                        <p className="text-black text-left text-1xl text-blue-500 font-semibold mt-2">
+                          Technologies Used:{" "}
+                        </p>
+                        <span className="block text-left text-black-500 my-2 italic">
+                          {project.technology}
+                        </span>
+
+                        <hr></hr>
+
+                        <span className="block text-left text-black-500 mt-2 mb-8">
                           {project.description}
                         </span>
 
-                        <p className="text-white font-semibold mt-2">Technologies Used: </p>
-                        <span className="block text-black-500 my-2">
-                        {project.technology}
-                        </span>
-                        
-                        <a  href={project.githubLink} target="_blank" rel="noreferrer" className="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 m-5 rounded">
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                          className="hover:underline text-blue-500 font-bold cursor:pointer"
+                        >
                           Source Code
                         </a>
-                        
-                        <a href={project.deployedLink} target="_blank" rel="noreferrer" className="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 m-5 rounded">
+
+                        <a
+                          href={project.deployedLink}
+                          target="_blank"
+                          className="hover:underline text-green-500 font-bold py-2 px-4 m-5 cursor:pointer"
+                        >
                           See Live
                         </a>
                       </div>
                     </div>
                   </div>
-
-                  
-                  
                 ))}
+              <div class="flex items-center  mt-12">
+                <span class="flex items-center text-white hover:underline hover:text-gray-200">
+                  {" "}
+                </span>
+              </div>
             </div>
-          </div>
-
-          <div className="flex items-center justify-center mt-12">
-            <a
-              className="flex items-center text-blue-500 hover:underline hover:text-blue-600"
-              href="https://github.com/mollymccollumwx" target="_blank" rel="noreferrer"
-            >
-              <span>View More On Github</span>
-
-            </a>
           </div>
         </div>
       </section>
-
-      
-
-
-
-   
     </>
   );
 }
