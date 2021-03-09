@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-scroll";
-import image from "./molly.JPG";
+import image from "../Assets/images/molly.JPG";
 import "./About.css";
-import Resume from "./Resume-web.pdf";
+import Resume from "../Assets/Resume-web.pdf"
 import { SocialIcon } from "react-social-icons";
 
 const About = () => {

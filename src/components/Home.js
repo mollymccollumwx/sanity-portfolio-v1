@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import Resume from "./Resume-web.pdf"
+import Resume from "../Assets/Resume-web.pdf"
 
 const Home = () => {
   return (
