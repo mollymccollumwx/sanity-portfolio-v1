@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import sanityClient from "../client.js"
+import sanityClient from "../client.js"; 
+
 
 
 export default function Project() {
@@ -47,25 +48,26 @@ export default function Project() {
                       />
                     </div>
 
-                    <div className="block bg-gray-700 rounded-md mt-4 overflow-hidden ">
+                    <div className="block bg-gray-200 rounded-md overflow-hidden ">
                       <div className="py-2 px-3 text-center text-md">
-                        <p className=" text-2xl text-gray-300 font-bold">{project.title}</p>
+                        <p className=" text-2xl text-blue-500 font-bold">{project.title}</p>
 
-                        <span className="block text-gray-500 mt-2">
+                        <span className="block text-black-500 mt-2">
                           {project.description}
                         </span>
 
-                        <p className="text-gray-300 font-semibold mt-2">Technologies Used: </p>
-                        <span className="block text-gray-500 my-2">
+                        <p className="text-blue-500 font-semibold mt-2">Technologies Used: </p>
+                        <span className="block text-black-500 my-2">
                         {project.technology}
                         </span>
-
-                        <button href={project.githubLink} target="_blank" className="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 m-5 rounded">
+                        
+                        <a  href={project.githubLink} target="_blank" className="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 m-5 rounded">
                           Source Code
-                        </button>
-                        <button  href={project.deployedLink} target="_blank" className="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 m-5 rounded">
+                        </a>
+                        
+                        <a href={project.deployedLink} target="_blank" className="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 m-5 rounded">
                           See Live
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -78,25 +80,11 @@ export default function Project() {
 
           <div className="flex items-center justify-center mt-12">
             <a
-              className="flex items-center text-white hover:underline hover:text-gray-200"
-              href="#"
+              className="flex items-center text-blue-500 hover:underline hover:text-gray-200"
+              href="https://github.com/mollymccollumwx" target="_blank"
             >
               <span>View More On Github</span>
 
-              <svg
-              
-                className="h-5 w-5 ml-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
             </a>
           </div>
         </div>
