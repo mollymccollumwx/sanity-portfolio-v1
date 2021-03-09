@@ -11,9 +11,8 @@ const Navbar = () => {
         <nav className=" flex">
           <Link
             to="home"
-            exact
             className="inline-flex items-center py-6 px-3 mr-4 text-black-100 hover:blue-500 text-4xl font-bold tracking-widest cursor-pointer"
-            activeClassName="text-white"
+            active="text-white"
             spy={true}
             smooth={true}
             offset={-70}
@@ -24,10 +23,10 @@ const Navbar = () => {
           <Link
             to="about"
             className="inline-flex items-center py-3 px-3 my-6 rounded text-black-200 hover:text-blue-500 cursor-pointer"
-            activeClassName="text-white"
+            active="text-white"
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={0}
             duration={500}
           >
             About
@@ -35,10 +34,10 @@ const Navbar = () => {
           <Link
             to="projects"
             className="inline-flex items-center py-3 px-3 my-6 rounded text-black-200 hover:text-blue-500  cursor-pointer"
-            activeClassName="text-white"
+            active="text-white"
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={0}
             duration={500}
           >
             Projects

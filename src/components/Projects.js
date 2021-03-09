@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../client.js"; 
+import "./Projects.css"
 
 
 
@@ -31,15 +32,19 @@ export default function Project() {
   return (
     <>
       <section className="py-20" id="projects">
+      <svg id="projects-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          {" "}
+          
+        </svg>
         <div className="max-w-8xl px-6 mx-auto text-center">
-          <h2 className="text-6xl font-semibold text-blue-500">Projects</h2>
+          <h2 className="text-6xl font-semibold text-white mt-10">Projects</h2>
 
           <div className="flex items-center justify-center mt-10">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
         
               {projectData &&
                 projectData.map((project, index) => (
-                  <div className="max-w-md w-full">
+                  <div key={index} className="max-w-md w-full">
                     <div className="flex items-center justify-center rounded-md h-96 border-teal-400 overflow-hidden transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:opacity-50">
                       <img
                         className="object-cover h-full w-full"
@@ -48,24 +53,24 @@ export default function Project() {
                       />
                     </div>
 
-                    <div className="block bg-gray-00 rounded-md overflow-hidden ">
+                    <div className="block border-4 rounded-md overflow-hidden mt-6">
                       <div className="py-2 px-3 text-center text-md">
-                        <p className=" text-2xl text-blue-500 font-bold">{project.title}</p>
+                        <p className=" text-2xl text-white font-bold">{project.title}</p>
 
                         <span className="block text-black-500 mt-2">
                           {project.description}
                         </span>
 
-                        <p className="text-blue-500 font-semibold mt-2">Technologies Used: </p>
+                        <p className="text-white font-semibold mt-2">Technologies Used: </p>
                         <span className="block text-black-500 my-2">
                         {project.technology}
                         </span>
                         
-                        <a  href={project.githubLink} target="_blank" className="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 m-5 rounded">
+                        <a  href={project.githubLink} target="_blank" rel="noreferrer" className="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 m-5 rounded">
                           Source Code
                         </a>
                         
-                        <a href={project.deployedLink} target="_blank" className="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 m-5 rounded">
+                        <a href={project.deployedLink} target="_blank" rel="noreferrer" className="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 m-5 rounded">
                           See Live
                         </a>
                       </div>
@@ -81,7 +86,7 @@ export default function Project() {
           <div className="flex items-center justify-center mt-12">
             <a
               className="flex items-center text-blue-500 hover:underline hover:text-blue-600"
-              href="https://github.com/mollymccollumwx" target="_blank"
+              href="https://github.com/mollymccollumwx" target="_blank" rel="noreferrer"
             >
               <span>View More On Github</span>
 

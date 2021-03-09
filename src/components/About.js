@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import image from "./molly.JPG";
 import "./About.css";
-import Resume from "./MollyMcCollum.pdf"
+import Resume from "./Resume-web.pdf"
 
 const About = () => {
   return (
@@ -11,7 +11,7 @@ const About = () => {
         id="about"
         className="min-w-screen min-h-screen bg-green-500 sm:my-20 flex items-center p-5 "
       >
-        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+        <svg id="about-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
           {" "}
           <polygon points="0, 100, 100, 0 100, 100"></polygon>
         </svg>
@@ -22,10 +22,9 @@ const About = () => {
                 <img
                   src={image}
                   className="w-full relative z-10"
-                  alt="profile picture"
+                  alt="profile"
                 />
-                {/* TODO: do something with this--not working */}
-                <div className="border-4 border-blue-400 top-28 bottom-28 left-28 right-28 "></div>
+                  
               </div>
             </div>
             <div className="w-full md:w-1/2 px-10">
@@ -54,6 +53,7 @@ const About = () => {
                     smooth={true}
                     offset={-70}
                     duration={500}
+                    rel="noreferrer"
                   >
                     <button className="border-2 border-transparent bg-blue-500 ml-3 py-2 px-4 font-bold text-white rounded transition-all hover:border-blue-500 hover:bg-transparent hover:text-blue-500">
                       Projects
@@ -61,8 +61,8 @@ const About = () => {
                   </Link>
                 </div>
                 <div className="inline-block align-bottom">
-                  <a href={Resume}>
-                  <button className="border-2 border-transparent bg-blue-500 ml-3 py-2 px-4 font-bold text-white rounded transition-all hover:border-blue-500 hover:bg-transparent hover:text-blue-500">
+                  <a href={Resume} target="_blank" rel="noreferrer">
+                  <button className="border-2 border-transparent bg-pink-500 ml-3 py-2 px-4 font-bold text-white rounded transition-all hover:border-pink-500 hover:bg-transparent hover:text-pink-500">
                     Resume
                   </button></a>
                 </div>
