@@ -89,8 +89,8 @@ export default function Project() {
                   </div>
                 ))}
               <div className="flex items-center  mt-12">
-                <span className="flex items-center text-white hover:underline hover:text-gray-200">
-                  {" "}
+                <span className="flex items-center text-blue-500 hover:underline hover:text-gray-200">
+                  {"  .      "} 
                 </span>
               </div>
             </div>
