@@ -30,7 +30,7 @@ export default function Project() {
 
   return (
     <>
-      <section className="py-20 mt-10" id="projects">
+      <section className="py-20 mt-10 h-screen" id="projects">
         <svg id="projects-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
           {" "}
         </svg>

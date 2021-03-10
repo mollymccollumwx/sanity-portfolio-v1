@@ -1,6 +1,6 @@
 #about{
     position: relative;
-    height: 500px;
+    height: 1000px;
     background-image: linear-gradient(#4568dc, #3bcf6d);
     clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
    
@@ -14,7 +14,7 @@
     fill: whitesmoke;  
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 1000px) {
     #about{
         
         height: 100%;

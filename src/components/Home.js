@@ -11,7 +11,7 @@ const Home = () => {
           Hi. My name is <span className="text-blue-500 font-extrabold">Molly</span>.
           <br />
           <span className="tracking-normal lg:text-5xl  text-2xl">
-            I'm a <span className="">Full Stack</span> Developer.
+            I'm a <span className="">Full-Stack</span> Developer.
           </span>
         </h1>
         <div className="justify-center my-auto mx-auto  mt-0 md:mx-48">
